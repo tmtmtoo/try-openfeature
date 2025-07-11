@@ -12,6 +12,9 @@ importers:
 
   packages/example-next-app:
     dependencies:
+      '@openfeature/react-sdk':
+        specifier: ^1.0.0
+        version: 1.0.0(@openfeature/web-sdk@1.5.0(@openfeature/core@1.8.1))(react@19.1.0)
       '@openfeature/server-sdk':
         specifier: ^1.18.0
         version: 1.18.0(@openfeature/core@1.8.1)
@@ -320,11 +323,22 @@ packages:
   '@openfeature/core@1.8.1':
     resolution: {integrity: sha512-5mDq0RTlCZKc3BKAArnz4CiPK5uPY5rf1NpYRy4snPf4OppcZXnjjrvozo5I1p4UtyHGu/maoUVtaQCY54/n0A==}
 
+  '@openfeature/react-sdk@1.0.0':
+    resolution: {integrity: sha512-662enepQyWu5eT8Cr1L0kNOrvIkucrUjDcaJacB4bP99B9VMnEBwWTF/8zEhRqrwNJ/gMIpzGm9fu0dfinu2+Q==}
+    peerDependencies:
+      '@openfeature/web-sdk': ^1.5.0
+      react: '>=16.8.0'
+
   '@openfeature/server-sdk@1.18.0':
     resolution: {integrity: sha512-uP8nqEGBS58s3iWXx6d8vnJ6ZVt3DACJL4PWADOAuwIS4xXpID91783e9f6zQ0i1ijQpj3yx+3ZuCB2LfQMUMA==}
     engines: {node: '>=18'}
     peerDependencies:
       '@openfeature/core': ^1.7.0
+
+  '@openfeature/web-sdk@1.5.0':
+    resolution: {integrity: sha512-AK9A4X6vRKQf/OvCue1LKM6thSDqbx/Sf3dHBTZ6p7DfpIKsD8mzCTgMhb5jukVlqwdKMlewU/rlYTYqqfnnTw==}
+    peerDependencies:
+      '@openfeature/core': ^1.8.0
 
   '@rtsao/scc@1.1.0':
     resolution: {integrity: sha512-zt6OdqaDoOnJ1ZYsCYGt9YmWzDXl4vQdKTyJev62gFhRGKdx7mcT54V9KIjg+d2wi9EXsPvAPKe7i7WjfVWB8g==}
@@ -1815,7 +1829,16 @@ snapshots:
 
   '@openfeature/core@1.8.1': {}
 
+  '@openfeature/react-sdk@1.0.0(@openfeature/web-sdk@1.5.0(@openfeature/core@1.8.1))(react@19.1.0)':
+    dependencies:
+      '@openfeature/web-sdk': 1.5.0(@openfeature/core@1.8.1)
+      react: 19.1.0
+
   '@openfeature/server-sdk@1.18.0(@openfeature/core@1.8.1)':
+    dependencies:
+      '@openfeature/core': 1.8.1
+
+  '@openfeature/web-sdk@1.5.0(@openfeature/core@1.8.1)':
     dependencies:
       '@openfeature/core': 1.8.1
 

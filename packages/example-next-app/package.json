@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@openfeature/react-sdk": "^1.0.0",
     "@openfeature/server-sdk": "^1.18.0",
     "next": "15.3.5",
     "react": "^19.0.0",
