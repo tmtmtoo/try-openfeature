@@ -4,7 +4,7 @@ import { useActionState, startTransition } from "react";
 
 export const Foobar = (props: { action: () => Promise<string> }) => {
   const [state, send] = useActionState(props.action, "initial");
-  const handler = () => startTransition(() => send());
+  const handler = () => startTransition(send);
 
   return (
     <div>
