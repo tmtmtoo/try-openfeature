@@ -18,6 +18,9 @@ importers:
       '@openfeature/server-sdk':
         specifier: ^1.18.0
         version: 1.18.0(@openfeature/core@1.8.1)
+      example-provider:
+        specifier: workspace:*
+        version: link:../example-provider
       next:
         specifier: 15.3.5
         version: 15.3.5(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -50,7 +53,11 @@ importers:
         specifier: ^5
         version: 5.8.3
 
-  packages/example-provider: {}
+  packages/example-provider:
+    dependencies:
+      typescript:
+        specifier: ^5.8.3
+        version: 5.8.3
 
 packages:
 
