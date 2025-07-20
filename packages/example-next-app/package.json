@@ -9,20 +9,20 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "example-provider": "workspace:*",
-    "@openfeature/react-sdk": "^1.0.0",
-    "@openfeature/server-sdk": "^1.18.0",
+    "@openfeature/react-sdk": "catalog:",
+    "@openfeature/server-sdk": "catalog:",
+    "example-server-provider": "workspace:*",
     "next": "15.3.5",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
+    "@eslint/eslintrc": "^3.3.1",
+    "@types/node": "^20.19.9",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "eslint": "^9.31.0",
     "eslint-config-next": "15.3.5",
-    "typescript": "^5"
+    "typescript": "catalog:"
   }
 }
