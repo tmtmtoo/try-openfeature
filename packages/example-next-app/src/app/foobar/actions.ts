@@ -1,9 +1,8 @@
 "use server";
+
 import { getExampleFlag } from "@/feature/server";
 
-export const foobar = async () => {
+export const foobar = async (): Promise<string> => {
   const flag = await getExampleFlag();
-  console.log(`Example feature flag value: ${JSON.stringify(flag)}`);
-
-  return "foobar";
+  return flag.toString();
 };

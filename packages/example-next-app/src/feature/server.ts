@@ -1,12 +1,15 @@
 import "server-only";
-import { InMemoryProvider, OpenFeature } from "@openfeature/server-sdk";
+import { OpenFeature } from "@openfeature/server-sdk";
 import { exampleFlagConfig } from "./config";
+import { ExampleServerProvider } from "example-server-provider";
 
 OpenFeature.setProvider(
-  new InMemoryProvider({
+  new ExampleServerProvider({
     exampleFlag: exampleFlagConfig,
   })
 );
+
+OpenFeature.setLogger(console);
 
 const client = OpenFeature.getClient();
 
